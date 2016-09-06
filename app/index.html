@@ -13,6 +13,10 @@
     <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- FontAwesome recently requires an email address to obtain an embed code - here's a workaround-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Open Sans google webfont : 300 light, 400 regular, 700 bold-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!--[if lt IE 9]>
     <div style="position:absolute; top:0; left:0; right:0; bottom:0; background-position:center center; background-size:cover; background-repeat:no-repeat;"></div>
     <div style="margin:50px auto 0; max-width:600px; text-align: center; padding:20px; border:3px solid#f58220;font-family: Arial, Helvetica, sans-serif;">
@@ -37,18 +41,40 @@
         <login />
     </section>
     <section ng-if="Four51User.isAuthenticated()" id="content">
+
+
+        <!--<section class="hidden-print">
+            <hamburgernavigation />
+        </section>-->
+
+        <section class="hidden-print">
+            <headernavigation />
+        </section>
+
         <section class="hidden-print">
             <navigation />
         </section>
-        <section class="hidden-print">
+
+        <!--<section class="hidden-print">
+            <categorynavigation />
+        </section>-->
+
+        <!--<section class="hidden-print">
             <branding />
+        </section>-->
+
+        <section ng-if="isActive('catalog')" class="hidden-print hidden-xs">
+            <customcarousel></customcarousel>
         </section>
+
         <section class="container-view">
             <ng-view autoscroll />
         </section>
+
         <section class="hidden-print">
             <copyright ng-if="!user.Permissions.contains('UnBrandedSite')" />
         </section>
+
     </section>
 </section>
 
@@ -74,6 +100,18 @@
     <script src="lib/angular/plugins/ngAutocomplete.js" data-group="resources"></script>
     <script src="lib/oc/anonRouter.js" data-group="resources"></script>
     <script src="lib/oc/ordercloud-specforms.js" data-group="resources"></script>
+
+    <script src="lib/oc/carousel.js" data-group="resources"></script>
+    <script src="lib/oc/categoryModal.js" data-group="resources"></script>
+    <script src="lib/oc/categoryNavigation.js" data-group="resources"></script>
+    <script src="lib/oc/checkoutItemSummary.js" data-group="resources"></script>
+    <script src="lib/oc/hamburgerNavigation.js" data-group="resources"></script>
+    <script src="lib/oc/headerNavigation.js" data-group="resources"></script>
+    <script src="lib/oc/minicart.js" data-group="resources"></script>
+    <script src="lib/oc/productSearchInput.js" data-group="resources"></script>
+    <script src="lib/oc/sameAsShippingCheckbox.js" data-group="resources"></script>
+    <script src="lib/oc/securityModal.js" data-group="resources"></script>
+    <script src="lib/oc/termsModal.js" data-group="resources"></script>
 
     <script src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 
@@ -164,7 +202,7 @@
     <script src="js/directives/customphonefield.js" data-group="source"></script>
     <script src="js/directives/customfilefield.js" data-group="source"></script>
     <script src="js/directives/approvalrulelist.js" data-group="source"></script>
-    <script src="js/directives/tree.js" data-group="source"></script>
+    <!--<script src="js/directives/tree.js" data-group="source"></script>-->
     <script src="js/directives/addressinput.js" data-group="source"></script>
     <script src="js/directives/reporting.js" data-group="source"></script>
     <script src="js/directives/inlineerror.js" data-group="source"></script>

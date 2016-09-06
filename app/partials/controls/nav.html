@@ -1,5 +1,5 @@
 <header class="header navbar navbar-inner">
-    <nav tolerance='20' offset='200' class="navbar navbar-default navbar-fixed-top" role="navigation" headroom>
+    <nav tolerance='20' offset='200' class="navbar navbar-inverse" role="navigation" headroom>
         <section>
             <div class="container">
                 <ul class="nav navbar-nav pull-left">
@@ -8,11 +8,14 @@
                             <i class="fa fa-arrow-left"></i>
                         </a>
                     </li>
-                    <li class="products" ng-class="{'active': isInPath('catalog') || isInPath('product') || isInPath('cart/default') || isInPath('search')}">
+                    <li class="products visible-xs" ng-class="{'active': isInPath('catalog') || isInPath('product') || isInPath('cart/default') || isInPath('search')}">
                         <a id="451qa_home_link" ng-show="Four51User.isAuthenticated()" href="catalog">
                             <i class="fa fa-home"></i>
                             <span class="hidden-xs">{{'Products' | rc | xlat}}</span>
                         </a>
+                    </li>
+                    <li>
+                        <categorymodal></categorymodal>
                     </li>
                     <li class="order" ng-if="user.Type == 'Customer'" ng-class="{'active': isActive('order'), 'active-xs': isActive('favoriteorders')}">
                         <a id="451qa_order_link" href="order">
@@ -72,8 +75,9 @@
                             <li class="divider" ng-show="user.Type!='TempCustomer' || AppConst.debug"></li>
                             <li ng-show="user.Type!='TempCustomer'" class="logout">
                                 <a href="#"  class="451_btn_logout" ng-click="Logout()">
-                                    <i class="fa fa-power-off text-danger"></i>
+                                    <!--<i class="fa fa-power-off text-danger"></i>-->
                                     <span>{{'Log Out' | r | xlat}}</span>
+                                    <i class="fa fa-sign-out"></i>
                                 </a>
                             </li>
                             <li ng-if="AppConst.debug">
@@ -86,23 +90,19 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav pull-right">
-                    <li class="cart" ng-class="{'active': isActive(['cart', 'checkout'])}">
-                        <a id="451qa_cart_link" ng-show="(cartCount && cartCount > 0) && user.CurrentOrderID" class="cart" href="cart">
-                            <span ng-bind="cartCount" class="badge"></span>
-                            <i class="fa fa-shopping-cart"></i>
-                            <i class="fa fa-caret-down"></i>
-                        </a>
+                    <li class="cart">
+                        <minicart></minicart>
                     </li>
                 </ul>
             </div>
         </section>
     </nav>
-    <nav class="dropdown-mega">
+    <!--<nav class="dropdown-mega">
         <a class="dropdown-toggle text-center" data-toggle="dropdown">
             <i class="fa fa-angle-down text-primary"></i>
         </a>
         <ul class="451qa_topnav dropdown-menu" >
             <categorytree tree='tree' current='currentCategory' />
         </ul>
-    </nav>
+    </nav>-->
 </header>

@@ -1,4 +1,4 @@
-<div class="panel panel-default panel-order">
+<div class="panel panel-no-panels panel-order">
     <div class="panel-heading" ng-class="{'no': cart_billing.$invalid, 'yes': !cart_billing.$invalid, 'open': checkOutSection == 'billing' }">
         <h3 ng-click="checkOutSection = 'billing'" class="panel-title">
             <i class="pull-left" ng-class="{'fa fa-warning': cart_billing.$invalid, 'fa fa-check-circle': !cart_billing.$invalid }"></i>
@@ -10,6 +10,7 @@
         <div>
             <billingmessage />
         </div>
+        <sameasshipaddresscheckbox></sameasshipaddresscheckbox>
         <div ng-show="billaddressform || (billaddresses.length == 0 && user.Permissions.contains('CreateBillToAddress'))">
             <addressinput address='billaddress' user='user'></addressinput>
         </div>

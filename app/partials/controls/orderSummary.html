@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<div class="panel panel-no-panels">
     <div class="panel-heading">
         <h3 class="panel-title panel-primary">
             {{('Checkout' | r) + ' ' + ('Summary' | r) | xlat}}
@@ -8,10 +8,11 @@
         <loadingindicator ng-show="couponLoadingIndicator" title="{{'Please wait while we verify and apply your promotion code' | r | xlat}}" />
         <loadingindicator ng-show="couponRemoveIndicator" title="{{'Please wait while we remove your promotion code' | r | xlat}}" />
         <orderconfirmationmessage />
-        <p>
+        <!--<p>
             <span class="text-info">{{'Items' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.LineItems.length}}</span>
-        </p>
+        </p>-->
+        <checkoutitemsummary></checkoutitemsummary>
         <p ng-if="!(user.Permissions.contains('HidePricing'))">
             <span class="text-info">{{'Subtotal' | r | xlat}}</span>
             <span class="pull-right">{{currentOrder.Subtotal | culturecurrency}}</span>
@@ -63,8 +64,9 @@
                 <span class="help-block text-left"><small>{{'Provide an email address if you would like to receive ' + ('Notification' | r) + 's concerning this order.' | r | xlat}}</small></span>
             </div>
         </div>
-        <button class="btn btn-default" redirect="/security">
+        <!--<button class="btn btn-default" redirect="/security">
             <span class="fa fa-info-circle"></span> {{'Concerned About Security?' | r | xlat}}
-        </button>
+        </button>-->
+        <securitymodal></securitymodal>
     </div>
 </div>
