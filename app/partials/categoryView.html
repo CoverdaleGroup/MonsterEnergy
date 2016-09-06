@@ -1,7 +1,7 @@
 <section>
     <nav id="451qa_nav_hdr" class="nav">
         <ul>
-            <li class="hidden-sm hidden-xs">
+            <!--<li class="hidden-sm hidden-xs">
                 <span ng-click="toggleNav()"><i class="fa fa-bars" ng-class="{ 'text-info': navStatus.visible }"></i></span>
             </li>
             <li>
@@ -11,17 +11,17 @@
                 <a href="search">
                     <span><i class="fa fa-search text-primary"></i></span>
                 </a>
-            </li>
+            </li>-->
         </ul>
     </nav>
     <div class="row">
-        <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible">
-            <div class="panel panel-default panel-nav">
-                <div class="panel-heading">
+        <aside class="col-md-3 visible-md visible-lg" ng-if="navStatus.visible && !isActive('catalog')">
+            <div class="panel panel-no-panels panel-nav">
+                <!--<div class="panel-heading">
                     <h3 class="panel-title">
                         {{'Category List' | r | xlat}}
                     </h3>
-                </div>
+                </div>-->
                 <nav class="nav 451qa_sidenav panel-body">
                     <ul>
                         <categorytree tree='tree' current='currentCategory' />
@@ -29,7 +29,7 @@
                 </nav>
             </div>
         </aside>
-        <div ng-class="{ 'col-md-9': navStatus.visible, 'col-md-12': !navStatus.visible }" >
+        <div ng-class="{ 'col-md-9': navStatus.visible && !isActive('catalog'), 'col-md-12': navStatus.visible && isActive('catalog') }" >
 
             <categorylistview></categorylistview>
 

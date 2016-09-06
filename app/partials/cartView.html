@@ -1,17 +1,17 @@
 <section>
     <div ng-show="currentOrder" class="hidden-print">
-        <nav class="nav">
+        <!--<nav class="nav">
             <ul>
                 <li><span class="text-primary">{{'Cart' | r | xlat}}</span></li>
                 <li class="pull-right" ng-click="onPrint()"><span><i class="fa fa-print text-primary" rel="tooltip" title="{{'Print' | r | xlat}}" ></i></span></li>
             </ul>
-        </nav>
+        </nav>-->
         <form ng-submit="saveChanges()" name="cart" novalidate="">
             <loadingindicator  ng-show="displayLoadingIndicator" title="{{'Please wait while we save your order' | r | xlat}}"/>
             <div>
                 <cartmessage />
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-no-panels">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         {{currentOrder.LineItems.length}} {{'item' + (currentOrder.LineItems.length > 1 ? 's' : '') | rl | xlat}} {{'in your' | rl | xlat:(currentOrder.LineItems.length)}} {{'cart' | rl | xlat}}

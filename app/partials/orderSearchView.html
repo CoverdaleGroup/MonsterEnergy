@@ -1,5 +1,5 @@
 <section class="order-search-view">
-    <div class="panel panel-default" ng-if="!hasStandardTypes && !hasReplenishmentTypes && !hasPriceRequestTypes">
+    <div class="panel panel-no-panels" ng-if="!hasStandardTypes && !hasReplenishmentTypes && !hasPriceRequestTypes">
         <div class="panel-heading">
             <h3 class="panel-title">{{'Orders' | r | xlat}}</h3>
         </div>
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="order-types">
-        <div class="panel panel-default" ng-show="hasStandardTypes">
+        <div class="panel panel-no-panels" ng-show="hasStandardTypes">
             <div class="panel-heading">
                 <h3 class="panel-title">{{('Standard' | r) + ' ' + ('Orders' | r) | xlat}}</h3>
             </div>
@@ -23,7 +23,7 @@
                 </ul>
             </div>
         </div>
-        <div class="panel panel-default" ng-show="hasReplenishmentTypes">
+        <div class="panel panel-no-panels" ng-show="hasReplenishmentTypes">
             <div class="panel-heading">
                 <h3 class="panel-title">{{('Replenishment' | r) + ' ' + ('Orders' | r) | xlat}}</h3>
             </div>
@@ -35,7 +35,7 @@
                 </ul>
             </div>
         </div>
-        <div class="panel panel-default" ng-show="hasPriceRequestTypes">
+        <div class="panel panel-no-panels" ng-show="hasPriceRequestTypes">
             <div class="panel-heading">
                 <h3 class="panel-title">{{'Price Request' | r | xlat}}</h3>
             </div>
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-default" ng-show="hasStandardTypes || hasReplenishmentTypes || hasPriceRequestTypes">
+    <div class="panel panel-no-panels" ng-show="hasStandardTypes || hasReplenishmentTypes || hasPriceRequestTypes">
         <div class="panel-heading">
             <h3 class="panel-title">{{('Search' | r) + ' ' + ('Orders' | r) | xlat}}</h3>
         </div>
@@ -118,7 +118,7 @@
             <button type="submit" class="btn btn-primary pull-right" ng-click="OrderSearch($event, criteria)">{{'Search' | r | xlat}}</button>
         </div>
     </div>
-    <div class="panel panel-default" ng-show="showNoResults">
+    <div class="panel panel-no-panels" ng-show="showNoResults">
         <div class="panel-heading">
             <h3 class="panel-title">
                 <span class="alert alert-info">
@@ -127,7 +127,7 @@
             </h3>
         </div>
     </div>
-    <div class="panel panel-default" ng-show="orders">
+    <div class="panel panel-no-panels" ng-show="orders">
         <div class="panel-heading">
             <h3 class="panel-title">
                 <span class="text-info" ng-show="orderSearchStat.Type">
