@@ -15,6 +15,7 @@ body {
 
 body {
     background: url('images/custom/background-login-3.jpg') #000 top center no-repeat fixed;
+   /*background: #000;*/
 }
 
 .header-navigation {
@@ -328,7 +329,7 @@ fieldset[disabled] .btn {
 
 .panel.panel-no-panels,
 .panel.panel-no-panels .well {
-    background-color:transparent;
+    background-color:rgba(0,0, 0, 0.9);
 }
 
 /*H-WHAT*/
