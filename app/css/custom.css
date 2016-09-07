@@ -3,17 +3,30 @@ Static file for Theme changes
 Theme name: My SPA Theme
 Version: 1.0
 Template: Howdy
+
+warning #99965f
 */
 
 body {
-    color:#1f1f1f;
+    color:#fff;
     font-family: 'Open Sans', sans-serif;
     font-weight:400;
 }
 
-body,
+body {
+    background: url('images/custom/background-login-3.jpg') #000 top center no-repeat fixed;
+}
+
 .header-navigation {
-    background:#000;
+    background:transparent;
+}
+
+.header-navigation,
+.navbar.navbar-inverse,
+.carousel,
+.container-view {
+    max-width:1600px;
+    margin:0 auto;
 }
 
 a {
@@ -25,18 +38,47 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+option {
+    color:#fff;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-wrapper {
+    color: #1f1f1f;
+}
+
+/*
+.modal-body h1,
+.modal-body h2,
+.modal-body h3,
+.modal-body h4,
+.modal-body h5,
+.modal-body h6,
+.modal-body .h1,
+.modal-body .h2,
+.modal-body .h3,
+.modal-body .h4,
+.modal-body .h5,
+.modal-body .h6 {
+    color: #1f1f1f;
+}*/
+
 .text-info,
 a.text-info:hover {
     color: #5cb85c;
 }
 
 .login .order-cloud-image {
-    /*background: url('css/images/orderCloud.jpg') center center fixed;*/
-    background:#000;
+    background: url('images/custom/background-login-3.jpg') center center no-repeat fixed;
+    /*background:#000;*/
 }
 
 .login .order-cloud .form-signin {
-    background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.925) none repeat scroll 0 0;
     border-radius: 6px;
     box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.85);
     margin: 2em auto;
@@ -204,6 +246,14 @@ fieldset[disabled] .btn {
     border-color:#1f1f1f;
 }
 
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #5cb85c;
+    color: #FFF;
+}
+
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
@@ -278,7 +328,7 @@ fieldset[disabled] .btn {
 
 .panel.panel-no-panels,
 .panel.panel-no-panels .well {
-    background-color:#000;
+    background-color:transparent;
 }
 
 /*H-WHAT*/
@@ -343,7 +393,8 @@ fieldset[disabled] .btn {
 }
 
 .panel-product-list.no-panels .well .thumbnail img {
-    max-height:100%;
+    /*max-height:100%;*/
+    max-height:135px;
 }
 
 .panel-lineitem .quantity-total {
