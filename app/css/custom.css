@@ -445,6 +445,7 @@ fieldset[disabled] .btn {
     border:0;
 }
 
+.address-list-view .panel.panel-no.panels,
 categorylistview .panel.panel-no-panels,
 productlistview .panel.panel-no-panels {
     background-color: transparent;
