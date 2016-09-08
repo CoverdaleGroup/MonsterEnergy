@@ -17,14 +17,9 @@ function customcarousel() {
 
     function template() {
         return [
-            '<style>',
-            '.carousel-inner a[ng-href=""]:hover{cursor: default}',
-            '.carousel-control.left {background-image: none;}',
-            '.carousel-control.right {background-image: none;}',
-            '</style>',
             '<carousel interval="myInterval">',
             '<slide ng-repeat="slide in slides" active="slide.active">',
-            '<a style="max-width: 100%; height: auto;" ng-href="{{slide.link}}" target="{{slide.link.indexOf(\'http\') > -1 ? \'_blank\' : \'_self\'}}">',
+            '<a ng-href="{{slide.link}}" target="{{slide.link.indexOf(\'http\') > -1 ? \'_blank\' : \'_self\'}}">',
             '<img ng-src="{{slide.image}}">',
             '</a>',
             '<div class="carousel-caption">',
