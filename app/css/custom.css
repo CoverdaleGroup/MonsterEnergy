@@ -196,7 +196,8 @@ a.text-info:hover {
     border: 1px solid #5cb85c;
 }
 
-.address-list-view .form-control {
+.address-list-view .form-control,
+.panel-search .form-control {
     background-color: transparent;
     margin:5px 0;
 }
@@ -388,6 +389,15 @@ fieldset[disabled] .btn {
 .panel.panel-no-panels,
 .panel.panel-no-panels .well {
     background-color:rgba(0,0, 0, 0.9);
+}
+
+.panel.panel-search {
+    border:0;
+}
+
+categorylistview .panel.panel-no-panels,
+productlistview .panel.panel-no-panels {
+    background-color: transparent;
 }
 
 .cart-view .panel.panel-no-panels,
