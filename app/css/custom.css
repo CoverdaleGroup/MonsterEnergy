@@ -15,8 +15,14 @@ body {
 
 body {
     background: url('images/custom/background-login-3.jpg') #000 top center no-repeat fixed;
-   /*background: #000;*/
 }
+
+/*@media(max-width:767px) {
+    body {
+        background: #000;
+    }
+
+}*/
 
 .header-navigation {
     background:transparent;
@@ -118,7 +124,6 @@ a.text-info:hover {
 .logo {
     padding:20px;
     text-align:center;
-
 }
 
 .logo img {
@@ -126,9 +131,13 @@ a.text-info:hover {
     height:auto;
 }
 
-@media (max-width:767px) {
+@media(max-width:767px) {
+    .logo {
+        padding:10px;
+    }
 
     .logo img {
+        width:65%;
         margin:0 auto;
     }
 }
