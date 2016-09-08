@@ -138,6 +138,12 @@ a.text-info:hover {
     padding:30px 0 30px 30px;
 }
 
+@media(max-width:767px) {
+    .product-search {
+        padding:30px;
+    }
+}
+
 .view-form-icon .btn i {
     color:#FFF;
 }
