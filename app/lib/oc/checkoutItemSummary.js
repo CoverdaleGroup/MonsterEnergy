@@ -13,16 +13,6 @@ function checkoutitemsummary() {
 
     function template() {
         return [
-            '<style>',
-            '.item-summary .text-info {margin:5px 0 10px 0;}',
-            '.item-summary .text-info span {margin:0 5px 0 0;}',
-            '.item-summary hr.top { min-height:10px; border-bottom:1px solid #ccc; margin:0 auto;}',
-            '.item-summary .table-responsive {width:100%;margin:10px 0;}',
-            '.item-summary .table-responsive,',
-            '.item-summary .table-responsive tbody,.item-summary .table-responsive td {border:0;}',
-            '.item-summary .table-responsive tbody th:nth-of-type(1), .item-summary .table-responsive tbody th:nth-of-type(1) {width:25%;}',
-            '.item-summary hr.bottom { min-height:10px; border-top:1px solid #ccc; margin:0 auto;}',
-            '</style>',
             '<div class="item-summary" ng-init="isCollapsedItems = true">',
             '<a class="text-info" ng-click="isCollapsedItems = !isCollapsedItems">',
             '<span>{{\'Items\' | r | xlat}}</span>',

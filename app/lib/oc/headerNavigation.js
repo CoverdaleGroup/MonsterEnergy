@@ -11,8 +11,6 @@ function headernavigation() {
 
     function template() {
         return [
-            '<style>',
-            '</style>',
             '<section class="header-navigation">',
                 '<div class="row">',
                     '<div class="col-xs-12">',
@@ -30,9 +28,6 @@ function headernavigation() {
                         '<div class="col-xs-12 col-sm-3 product-search">',
                             '<productsearchinput></productsearchinput>',
                         '</div>',
-                        //'<div class="col-xs-12 col-sm-4 col-md-3 minicart-wrapper">',
-                        //'<minicart></minicart>',
-                        //'</div>',
                     '</div>',
                 '</div>',
             '</div>',
