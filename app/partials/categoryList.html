@@ -1,17 +1,21 @@
-<div class="panel panel-no-panels" ng-show="currentCategory.SubCategories.length">
-    <!--<div class="panel-heading" >
+<div class="panel panel-no-panels category-list-wrapper" ng-show="currentCategory.SubCategories.length">
+    <!--<div class="panel-heading">
         <h3 class="panel-title" >
             {{'Categories' | r | xlat}}
         </h3>
     </div>-->
+    <h1 class="col-xs-12 text-center" ng-if="isActive('catalog')">{{'Categories' | r | xlat}}</h1>
     <div class="panel-category-list">
+        <h1 class="col-xs-12 text-center">{{currentCategory.Name}}</h1>
         <loadingindicator ng-show="categoryLoadingIndicator" title="{{'Please wait while we fetch all categories' | r | xlat}}" />
         <nav class="nav 451_lbl_subcatlist">
             <ul>
                 <li class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-repeat="c in currentCategory.SubCategories">
-                    <div class="well image-bg dark" style="background-image:url({{c.Image.URL}});">
+                    <!--<div class="well image-bg dark" style="background-image:url({{c.Image.URL}});">-->
+                    <div class="well">
                         <a ng-href="catalog/{{c.InteropID}}">
-                            <h4 ng-bind-html="c.Name" />
+                            <img class="img-responsive" ng-src="{{c.Image.URL}}" />
+                            <h3 ng-bind-html="c.Name" />
                         </a>
                     </div>
                 </li>

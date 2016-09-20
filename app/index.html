@@ -10,13 +10,12 @@
 	<link rel="stylesheet" href="css/editor.css" data-group="source" />
 	<link rel="stylesheet" href="css/theme.css" data-group="source" />
 	<link rel="stylesheet" href="css/custom.css" data-group="source" />
-    <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
-    <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+    <!--<link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />-->
     <link rel="stylesheet" href="css/animate.min.css" />
     <!-- FontAwesome recently requires an email address to obtain an embed code - here's a workaround-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Open Sans google webfont : 300 light, 400 regular, 700 bold-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <!--[if lt IE 9]>
     <div style="position:absolute; top:0; left:0; right:0; bottom:0; background-position:center center; background-size:cover; background-repeat:no-repeat;"></div>
     <div style="margin:50px auto 0; max-width:600px; text-align: center; padding:20px; border:3px solid#f58220;font-family: Arial, Helvetica, sans-serif;">
@@ -36,7 +35,8 @@
 </head>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <body ng-cloak ng-class="ng-cloak">
-<section>
+<section class="wrapper">
+
     <section ng-hide="Four51User.isAuthenticated() || isAnon" class="container">
         <login />
     </section>
