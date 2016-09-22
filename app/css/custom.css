@@ -5,6 +5,8 @@ Version: 1.0
 Template: Howdy
 
 warning #99965f
+
+#99cc00 monster green
 */
 
 @font-face {
@@ -14,7 +16,6 @@ warning #99965f
 
 body {
     color:#fff;
-    /*font-family: 'Fjalla One', sans-serif;*/
     font-family: LemonMilk, sans-serif;
     font-weight:400;
 }
@@ -69,7 +70,7 @@ option {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color:#99cc00;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: LemonMilk, sans-serif;;
 }
 
 .modal-wrapper {
@@ -386,7 +387,7 @@ fieldset[disabled] .btn {
 @media (max-width: 768px) {.minicart { min-width:auto; } }
 .text-muted {color: #FFF;}
 .minicart .fa-shopping-cart {position: relative;top: 3px;padding-right: 5px; font-size:1.5em;}
-.minicart .label.label-default {border-radius: 0;background-color: #5cb85c; color:#000;}
+.minicart .label.label-default {border-radius: 0;background-color: #99cc00; color:#000;}
 .minicart:active .minicart-detail, .minicart:focus .minicart-detail, .minicart:hover .minicart-detail {display: block;}
 @media (max-width: 768px) {.minicart:active .minicart-detail, .minicart:focus .minicart-detail, .minicart:hover .minicart-detail {min-width:260px;} }
 .minicart .minicart-detail {
@@ -556,7 +557,7 @@ productlistview .panel.panel-no-panels {
 .category-list-wrapper h1 {
     font-family: LemonMilk, sans-serif;
     text-transform:uppercase;
-    margin:0 auto;
+    margin:0 auto 20px;
 }
 
 .panel.panel-no-panels .panel-category-list li .well  {
@@ -575,6 +576,7 @@ productlistview .panel.panel-no-panels {
 }
 
 .panel-category-list .well h3 {
+    font-size:32px;
     text-transform:uppercase;
     color:#FFF;
     text-shadow: 2px 2px #000;
@@ -597,7 +599,25 @@ productlistview .panel.panel-no-panels {
 
 .panel-product-list.no-panels .well {
     border: 1px solid #1f1f1f;
-    background:transparent;
+    background:#FFF;
+}
+
+.panel-product-list.no-panels .well:hover {
+    background:rgba(255, 255, 255, 0.7);
+}
+
+.panel-product-list.no-panels .well:hover h3 {
+    color:#000;
+}
+
+.panel-product-list.no-panels p,
+.panel-product-list.no-panels small {
+    color:#000;
+}
+ 
+.panel-product-list.no-panels small {
+    width:100%;
+    text-align:center;
 }
 
 .panel-product-list.no-panels .well .thumbnail img {
