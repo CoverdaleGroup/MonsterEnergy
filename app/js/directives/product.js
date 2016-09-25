@@ -121,7 +121,7 @@ four51.app.directive('staticspecstable', function() {
     return obj;
 });
 
-four51.app.directive('productnav', function() {
+/*four51.app.directive('productnav', function() {
 	var obj = {
 		scope: {
 			product: '=',
@@ -132,7 +132,7 @@ four51.app.directive('productnav', function() {
 		templateUrl: 'partials/controls/productNav.html'
 	};
 	return obj;
-});
+});*/
 
 four51.app.directive("variantlist", function() {
 	var obj = {
