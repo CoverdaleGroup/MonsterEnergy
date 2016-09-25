@@ -466,7 +466,7 @@ fieldset[disabled] .btn {
 
 .panel.panel-no-panels,
 .panel.panel-no-panels .well {
-    background-color:rgba(0,0, 0, 0.9);
+    background-color:rgba(0,0, 0, 0.4);
 }
 
 .panel.panel-search {
@@ -611,6 +611,10 @@ productlistview .panel.panel-no-panels {
     min-height:200px; /*was 245px*/
 }
 
+.panel.panel-no-panels.home .panel-category-list li .well  {
+    background-color:#060606;
+}
+
 .panel-category-list ul li a {
     padding: 0;
 }
@@ -738,4 +742,9 @@ productlistview .panel.panel-no-panels {
 .copyright-view a.btn,
 .copyright-view a.btn:hover {
     color:#FFF;
+}
+
+.view-form-icon .quantity div input {
+    border-color: #99cc00;
+    color: #99cc00;
 }

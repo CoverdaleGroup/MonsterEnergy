@@ -61,7 +61,7 @@ h2 .jumbotron  {color: #ffffff;}
 .panel-default .panel-heading .panel-title  {background-color: transparent;}
 .panel-default .panel-heading .panel-title  {color: #FFFFFF;}
 
-.panel  {background-color: rgba(0,0,0,0.75);}
+.panel  {background-color: rgba(0,0,0,0.4);}
 .panel-footer  {background-color: transparent;}
 
 .panel-category-list .well  {background-color: rgba(0,0,0,0.25);}

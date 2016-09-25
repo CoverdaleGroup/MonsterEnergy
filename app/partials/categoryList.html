@@ -1,4 +1,4 @@
-<div class="panel panel-no-panels category-list-wrapper" ng-show="currentCategory.SubCategories.length">
+<div class="panel panel-no-panels category-list-wrapper" ng-class="{'home': isActive('catalog')}" ng-show="currentCategory.SubCategories.length">
     <!--<div class="panel-heading">
         <h3 class="panel-title" >
             {{'Categories' | r | xlat}}

@@ -12,7 +12,7 @@
         </nav>
         <div class="col-md-3 col-md-offset-1 col-md-push-8">
             <div class="row">
-                <div class="panel panel-primary">
+                <div class="panel panel-no-panels">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             {{('Order' | r) + ' ' + ('Details' | r) | xlat}}
@@ -32,9 +32,9 @@
             </div>
         </div>
         <div class="col-md-8 col-md-pull-4">
-            <div class="panel panel-default">
+            <div class="panel panel-no-panels">
                 <div class="panel-heading">
-                    <h3 class="panel-title panel-primary">
+                    <h3 class="panel-title">
                         {{order.LineItems.length}} {{'Item' + (order.LineItems.length > 1 ? 's' : '') | rl | xlat}} {{'in this' | rl | xlat:(currentOrder.LineItems.length)}} {{'Order' | rl | xlat}}
                     </h3>
                 </div>
@@ -57,7 +57,7 @@
                             <input type="text" ng-model="order.FavoriteName" placeholder="{{('Favorite' | r) + ' ' + ('Name' | r) | xlat}}" class="form-control" autocomplete="off" />
                             <i class="fa fa-star"></i>
                             <span class="input-group-btn">
-                                <button type="button" ng-click="saveFavorite()" class="btn btn-info">{{('Save' | r) + ' ' + ('Favorite' | r) | xlat}}</button>
+                                <button type="button" ng-click="saveFavorite()" class="btn btn-default">{{('Save' | r) + ' ' + ('Favorite' | r) | xlat}}</button>
                             </span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div class="pull-right">
                             <loadingindicator  ng-show="currentLoadingIndicator" />
                             <i class="fa fa-icon-random"></i>
-                            <button ng-if="order.ID != currentOrder.ID" type="button" ng-click="currentLoadingIndicator = true; setCurrent()" class="btn btn-info">
+                            <button ng-if="order.ID != currentOrder.ID" type="button" ng-click="currentLoadingIndicator = true; setCurrent()" class="btn btn-default">
                                 {{'Set as Current' | r}} {{'Order' | r}}
                             </button>
                         </div>
@@ -76,9 +76,9 @@
                 </div>
             </div>
 
-            <div ng-show="order.Approvals" class="panel panel-default approval-rule-status-summary">
+            <div ng-show="order.Approvals" class="panel panel-no-panels approval-rule-status-summary">
                 <div class="panel-heading">
-                    <h3 class="panel-title panel-primary">{{'Approvals' | r | xlat}}</h3>
+                    <h3 class="panel-title">{{'Approvals' | r | xlat}}</h3>
                 </div>
                 <div class="panel-body">
                     <approval ng-show="order.Status == 'AwaitingApproval' && (order.UserCanApprove || user.Permissions.contains('ApproveAllOrders'))" order="order"/>
