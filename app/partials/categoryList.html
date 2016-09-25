@@ -6,7 +6,7 @@
     </div>-->
     <h1 class="col-xs-12 text-center" ng-if="isActive('catalog')">{{'Categories' | r | xlat}}</h1>
     <div class="panel-category-list">
-        <h1 class="col-xs-12 text-center">{{currentCategory.Name}}</h1>
+        <h1 class="col-xs-12 text-center" ng-if="currentCategory.Name"><span>{{currentCategory.Name}}</span></h1>
         <loadingindicator ng-show="categoryLoadingIndicator" title="{{'Please wait while we fetch all categories' | r | xlat}}" />
         <nav class="nav 451_lbl_subcatlist">
             <ul>

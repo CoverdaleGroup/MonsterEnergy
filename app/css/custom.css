@@ -7,6 +7,7 @@ Template: Howdy
 warning #99965f
 
 #99cc00 monster green
+#89b700 (1 tint darker for hovers)
 */
 
 @font-face {
@@ -60,7 +61,7 @@ a {
 }
 
 a:hover, a:focus {
-    color: #5cb85c;
+    color: #99cc00;
     text-decoration: none;
 }
 
@@ -94,7 +95,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .text-info,
 a.text-info:hover {
-    color: #5cb85c;
+    color: #99cc00;
+}
+
+.text-success {
+    color: #99cc00;
 }
 
 .login .order-cloud-image {
@@ -105,7 +110,7 @@ a.text-info:hover {
 .login .order-cloud .form-signin {
     background: rgba(0, 0, 0, 0.925) none repeat scroll 0 0;
     border-radius: 6px;
-    box-shadow: 0 0 0 2px rgba(92, 184, 92, 0.85);
+    box-shadow: 0 0 0 2px rgba(153, 204, 0, 0.85);
     margin: 2em auto;
     max-width: 26em;
     padding: 1em 1em 2em;
@@ -117,7 +122,7 @@ a.text-info:hover {
 
 .order-cloud .form-signin .btn-info {
     background-color: #1f1f1f;
-    border-color: #5cb85c;
+    border-color: #99cc00;
     color: #fff;
 }
 
@@ -131,7 +136,7 @@ a.text-info:hover {
 
 .login .alert-info {
     background-color: #1f1f1f;
-    border-color: #5cb85c;
+    border-color: #99cc00;
     color: #fff;
 }
 
@@ -248,7 +253,7 @@ a.text-info:hover {
 
 .form-control {
     background-color: #1f1f1f;
-    border: 1px solid #5cb85c;
+    border: 1px solid #99cc00;
     color:#FFF;
 }
 
@@ -258,7 +263,7 @@ a.text-info:hover {
 }
 
 .form-control:focus {
-    border: 1px solid #5cb85c;
+    border: 1px solid #99cc00;
 }
 
 .address-list-view .form-control,
@@ -276,7 +281,7 @@ a.text-info:hover {
 
 .btn-default {
     background-color: #1f1f1f;
-    border-color: #5cb85c;
+    border-color: #99cc00;
     color: #FFF;
 }
 
@@ -287,7 +292,7 @@ a.text-info:hover {
 .open .dropdown-toggle.btn-default {
     color: #FFF;
     background-color: #000;
-    border-color: #5cb85c;
+    border-color: #99cc00;
 }
 
 .btn-default.disabled,
@@ -306,18 +311,20 @@ fieldset[disabled] .btn-default:active,
 .btn-default.active[disabled],
 fieldset[disabled] .btn-default.active {
     background-color: #1f1f1f;
-    border-color: #5cb85c;
+    border-color: #99cc00;
 }
 
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
     opacity: 1;
+    background-color: #99cc00;
+    border-color: #89b700;
 }
 
 .navbar .container .navbar-nav.pull-left li.fadeInLeft a i,
 .navbar .container-view .navbar-nav.pull-left li.fadeInLeft a i {
-    color: #5cb85c;
+    color: #99cc00;
 }
 
 .navbar-inverse {
@@ -328,30 +335,30 @@ fieldset[disabled] .btn {
 .navbar-inverse .navbar-nav .dropdown-menu > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #5cb85c;
+    background-color: #99cc00;
     color: #FFF;
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu > .active > a:hover,
 .navbar-inverse .navbar-nav .dropdown-menu > .active > a:focus {
-    background-color: #449d44;
+    background-color: #89b700;
     color: #FFF;
 }
 
 .navbar-inverse .navbar-nav > .open > a {
-    background-color: #5cb85c;
+    background-color: #99cc00;
     color: #FFF;
 }
 
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #449d44;
+    background-color: #89b700;
     color: #FFF;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: #5cb85c;
+    color: #99cc00;
     background-color: transparent;
 }
 
@@ -433,17 +440,23 @@ fieldset[disabled] .btn {
     margin:0 auto;
 }
 
+.breadcrumbs {margin-left: 5px;}
+.breadcrumb {margin-bottom:0;padding:14px 15px;background-color: transparent;}
+.breadcrumb a{color: #99cc00;text-decoration:none}
+.breadcrumb a:hover {text-decoration:underline}
+.breadcrumbs li:last-child a{font-weight:bold;}
+
 .app-loading-indicator-cell {
     background-color:#000;
 }
 
 .app-loading-indicator-cell i {
-    color: #5cb85c;
+    color: #99cc00;
 }
 
 .app-loading-indicator-cell p {
     background-color: transparent;
-    color: #5cb85c;
+    color: #99cc00;
 }
 
 .panel-nav li,
@@ -479,8 +492,13 @@ productlistview .panel.panel-no-panels {
     border:0;
 }
 
+.product-detail-default .panel.panel-no-panels,
+.product-detail-default .panel.panel-no-panels .well {
+    background-color:rgba(0,0, 0, 0.4);
+}
+
 .product-detail-default h2 {
-    background:rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+    background:rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
 }
 
 .product-detail-default .social a {
@@ -557,14 +575,40 @@ productlistview .panel.panel-no-panels {
 .category-list-wrapper h1 {
     font-family: LemonMilk, sans-serif;
     text-transform:uppercase;
-    margin:0 auto 20px;
+    /*margin:0 auto 20px;*/
+    position: relative;
+    width: 100%;
+    text-align: center;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.category-list-wrapper h1:before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 33%;
+    border-bottom: 1px solid #99cc00;
+}
+
+.category-list-wrapper h1:after {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    content: '';
+    width: 33%;
+    border-bottom: 1px solid #99cc00;
+}
+.category-list-wrapper h1 span {
+    padding: 0 10px;
 }
 
 .panel.panel-no-panels .panel-category-list li .well  {
     border:4px solid rgba(79,79,79,0.47); /*#4f4f4f*/
-    background-color:#060606;
+    background-color:#020202;
     border-radius:4px;
-    min-height:140px; /*was 245px*/
+    min-height:200px; /*was 245px*/
 }
 
 .panel-category-list ul li a {
@@ -572,7 +616,7 @@ productlistview .panel.panel-no-panels {
 }
 
 .panel-category-list ul li a img {
-    max-height:300px; /*was 300*/
+    max-height:140px; /*was 300*/
 }
 
 .panel-category-list .well h3 {
@@ -627,13 +671,13 @@ productlistview .panel.panel-no-panels {
 
 .panel-lineitem .quantity-total {
     background-color: #1f1f1f;
-    border-color: #5cb85c;
+    border-color: #99cc00;
     color:#FFF;
 }
 
 .panel-lineitem a.line-item-link:hover {
     background-color: rgba(31,31,31,0.5);
-    border: 1px solid #5cb85c;
+    border: 1px solid #99cc00;
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td,
@@ -660,7 +704,7 @@ productlistview .panel.panel-no-panels {
 
 .modal-header {
     background-color: #1f1f1f;
-    border-bottom: 5px solid #5cb85c;
+    border-bottom: 5px solid #99cc00;
     min-height: 36px;
     padding: 15px;
     color:#FFF;
@@ -684,4 +728,14 @@ productlistview .panel.panel-no-panels {
     width:100%;
     margin:0 auto;
     padding:20px;
+}
+
+.copyright-view a,
+.copyright-view a:hover {
+    color:#000;
+}
+
+.copyright-view a.btn,
+.copyright-view a.btn:hover {
+    color:#FFF;
 }

@@ -48,7 +48,7 @@
             </div>
         </div>
         <!-- PRODUCT DESCRIPTION PANEL! --->
-        <div ng-show="LineItem.Variant.Description">
+        <div>
             <div class="panel panel-no-panels">
                 <div class="panel-heading">
                     <h3 class="panel-title panel-primary">
@@ -174,42 +174,6 @@
                 </div>
             </div>
         </form>
-
-        <div class="social">
-            <!--FACEBOOK-->
-            <div id="fb-root" style="float:left;"></div>
-            <script>
-                window.fbAsyncInit = function() {
-                    FB.init({appId: '1054529157973414', status: true, cookie: true, xfbml: true});
-                };
-                (function() {
-                    var e = document.createElement('script'); e.async = true;
-                    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
-                    document.getElementById('fb-root').appendChild(e);
-                }());
-            </script>
-            <a ng-click="shareFB(post)"><i class="fa fa-facebook-square fa-2x"></i></a>
-            <!--FACEBOOK-->
-
-            <!--TWITTER-->
-            <a ng-href="{{'https://twitter.com/intent/tweet?original_referer=' + encodeComponent(tumblr_link_url) + '&text=' + encodeComponent(twitter_link_description) + '&tw_p=tweetbutton&url=' + encodeComponent(tumblr_link_url)}}"
-               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <i class="fa fa-twitter-square fa-2x"></i>
-            </a>
-
-            <!-- PINTEREST -->
-            <a ng-href="{{'//www.pinterest.com/pin/create/button/?url=' + encodeComponent(tumblr_link_url) + '&media=' + LineItem.Product.LargeImageUrl + '&description=Check%20out%20the%20' + LineItem.ShareName + '%20!'}}"
-               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <i class="fa fa-pinterest-square fa-2x"></i>
-            </a>
-
-            <!--TUMBLR-->
-            <a ng-href="{{'http://www.tumblr.com/share/link?url=' + encodeComponent(tumblr_link_url) + '&name=' + encodeComponent(tumblr_link_name) + '&description=' + encodeComponent(tumblr_link_description)}}"
-               onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <i class="fa fa-tumblr-square fa-2x"></i>
-            </a>
-        </div>
-
 
         <!-- RELATED PRODUCTS! -->
         <relatedproducts ng-if="LineItem.Product.RelatedProductsGroupID" relatedgroupid="LineItem.Product.RelatedProductsGroupID" />
