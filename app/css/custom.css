@@ -580,7 +580,7 @@ productlistview .panel.panel-no-panels {
     width: 100%;
     text-align: center;
     line-height: 0.1em;
-    margin: 10px 0 20px;
+    padding: 10px 0 30px; 
 }
 
 .category-list-wrapper h1:before {
